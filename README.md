@@ -33,6 +33,28 @@ namespace mid_prep
                     Console.WriteLine(element);
                 }
             }
+            
+            public static void descSort (int [] array2) 
+            {
+               int temp;
+               for (int i=0; i<array2.Length; i++)
+               {
+                  for (int j=0; j<array2.Length; j++)
+                  {
+                     if(array2[j]<array2[i])
+                     {
+                         temp = array2[j];
+                         array2[j] = array2[i];
+                         array2[i] = temp;
+                     }
+                  }
+               }
+               
+               foreach (var elt in array2)
+               {
+                    Console.WriteLine(elt);
+               }
+            }
         }
         
         static void Main(string[] args)
